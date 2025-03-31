@@ -4,10 +4,10 @@ import { createVote, fetchVotes } from "../services/catApiService";
 import { IVote } from "../interfaces/Vote";
 
   {/* There is no actual lion to be found in theCatApi, so this dummy is a placeholder */}
-const KING_ID: String = "dpk";
+const KING_ID: string = "dpk";
 
-function getRandomId(): String {
-    let randomString = (Math.random() + 1).toString(36).substring(7);
+function getRandomId(): string {
+    const randomString = (Math.random() + 1).toString(36).substring(7);
     return randomString
 }
 
@@ -18,7 +18,7 @@ async function voteInElection(vote: IVote): Promise<void> {
     );
 }
 
-async function getElectionVotes(id: String, setAllVotes: Function): Promise<void> {
+async function getElectionVotes(id: string, setAllVotes: Function): Promise<void> {
     const votes = await fetchVotes().catch((error) =>
         console.error("Failed to fetch votes:", error.message)
     );

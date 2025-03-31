@@ -1,5 +1,5 @@
 export interface IVote {
-    id: String;
+    id: string;
     value: number;
-    image_id?: String;
+    image_id?: string;
 }
