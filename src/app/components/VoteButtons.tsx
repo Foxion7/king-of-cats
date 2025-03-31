@@ -44,8 +44,6 @@ export default function VoteButtons() {
     };
 
     useEffect(() => {
-        console.log("trigger");
-        
         getElectionVotes(KING_ID, setAllVotes)
     }, [vote]);
 

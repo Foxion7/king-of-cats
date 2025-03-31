@@ -13,7 +13,7 @@ async function initializeAllBreeds(setAllBreeds: Function) {
     setAllBreeds(allBreedsData)
 }
 
-function filterBreedsByQuery(query: String, allBreeds: IBreed[], setFilteredBreeds: Function) {
+function filterBreedsByQuery(query: string, allBreeds: IBreed[], setFilteredBreeds: Function) {
     if (query === "") {
         setFilteredBreeds(allBreeds)
     } else {
@@ -23,7 +23,7 @@ function filterBreedsByQuery(query: String, allBreeds: IBreed[], setFilteredBree
 }
 
 export default function BreedCardList() {
-    const [query, setQuery] = useState<String>("")
+    const [query, setQuery] = useState<string>("")
     const [allBreeds, setAllBreeds] = useState<IBreed[]>([])
     const [filteredBreeds, setFilteredBreeds] = useState<IBreed[]>([])
     
