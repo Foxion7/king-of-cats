@@ -2,7 +2,7 @@ import { cache } from "react";
 import { IVote } from "../interfaces/Vote";
 
 const BASE_URL = "https://api.thecatapi.com/v1";
-const API_KEY = "live_Yzpf7RuPcGm84nJr1Jms4FOiOCUikq93d1f12ftBMU0Sajg9YiTCJ8jv2H12XUdr";
+const API_KEY = process.env.apiKey;
 
 export const fetchAllBreeds = cache(async () => {
     const url = `${BASE_URL}/breeds`;
