@@ -10,6 +10,7 @@ export default function BreedSearchBar(props: { setQuery: Function }) {
                     className="p-4 w-70 text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
                     placeholder="What breed are you looking for?"
                     value={breed}
+                    maxLength={30}
                     onChange={(event) => setBreed(event.target.value)}/>
             </div>
             <button 
